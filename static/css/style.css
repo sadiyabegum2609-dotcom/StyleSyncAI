@@ -1,0 +1,476 @@
+body{
+    margin:0;
+    padding:0;
+    font-family:Arial, sans-serif;
+}
+.hero{
+    height:100vh;
+    background:
+        linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+        url("images/fashion.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.hero-content{
+    background:rgba(255,255,255,0.05);
+    padding:40px;
+    border-radius:20px;
+}
+
+h1{
+    color:white;
+    font-size:70px;
+    margin-bottom:15px;
+}
+
+p{
+    color:white;
+    font-size:24px;
+    margin-bottom:25px;
+}
+
+.btn{
+    background:#7c3aed;
+    color:white;
+    text-decoration:none;
+    padding:15px 30px;
+    border-radius:10px;
+    font-size:18px;
+    display:inline-block;
+}
+
+.btn:hover{
+    background:#9333ea;
+}
+header{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    padding:20px 50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:1000;
+    box-sizing:border-box;
+}
+
+.logo{
+    color:white;
+    font-size:30px;
+    font-weight:bold;
+}
+
+nav{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    background:#7c3aed;
+    padding:12px 22px;
+    border-radius:12px;
+    font-weight:bold;
+    transition:0.3s;
+    white-space:nowrap;
+}
+
+nav a:hover{
+    background:#9333ea;
+    transform:translateY(-2px);
+}
+.login-box{
+    width:450px;
+    margin:60px auto;
+    background:rgba(255,255,255,0.08);
+    padding:35px;
+    border-radius:20px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.4);
+    backdrop-filter:blur(10px);
+    text-align:center;
+    color:white;
+}
+
+.login-box button{
+    width:100%;
+    padding:12px;
+    background:#7c3aed;
+    color:white;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+.login-box button:hover{
+    background:#9333ea;
+}
+.gallery{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    padding:40px;
+}
+
+.gallery img{
+    width:250px;
+    height:350px;
+    object-fit:cover;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+label{
+    color:white;
+    font-weight:bold;
+    font-size:18px;
+}
+
+input,
+select{
+    width:100%;
+    padding:14px;
+    margin:10px 0 20px;
+    border:none;
+    border-radius:12px;
+    font-size:16px;
+    background:#f8fafc;
+    color:#111827;
+}
+
+#wardrobeList{
+    margin-top:20px;
+    list-style:none;
+    padding:0;
+}
+
+#wardrobeList li{
+    background:#6d5dfc;
+    color:white;
+    padding:12px;
+    margin-top:10px;
+    border-radius:8px;
+    font-size:18px;
+}
+.wardrobe-card{
+    background:#2c2f48;
+    padding:15px;
+    border-radius:12px;
+    margin-top:15px;
+    text-align:left;
+    box-shadow:0 5px 12px rgba(0,0,0,0.3);
+}
+
+.wardrobe-card h3{
+    color:#a855f7;
+    margin-bottom:8px;
+}
+
+.wardrobe-card p{
+    color:white;
+    margin-bottom:12px;
+}
+
+.wardrobe-card button{
+    background:#ef4444;
+    color:white;
+    border:none;
+    padding:8px 15px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.wardrobe-card button:hover{
+    background:#dc2626;
+}
+/* Features Section */
+
+.features{
+    padding:80px 10%;
+    background:#0f172a;
+    text-align:center;
+}
+
+.features h2{
+    color:white;
+    font-size:42px;
+    margin-bottom:50px;
+}
+
+.feature-box{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+.feature-card{
+    width:250px;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(10px);
+    padding:25px;
+    border-radius:18px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.3);
+    transition:0.3s;
+}
+
+.feature-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 12px 25px rgba(124,58,237,0.5);
+}
+
+.feature-card h3{
+    color:#a78bfa;
+    margin-bottom:15px;
+    font-size:22px;
+}
+
+.feature-card p{
+    color:white;
+    font-size:16px;
+    line-height:1.6;
+}
+/* About Section */
+
+.about{
+    background:#111827;
+    padding:80px 15%;
+    text-align:center;
+}
+
+.about h2{
+    color:#a855f7;
+    font-size:40px;
+    margin-bottom:25px;
+}
+
+.about p{
+    color:white;
+    font-size:20px;
+    line-height:1.8;
+    max-width:900px;
+    margin:auto;
+}
+/* Fashion Collection */
+
+.fashion-gallery{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+    margin:30px 0;
+}
+
+.fashion-item{
+    width:220px;
+    background:rgba(255,255,255,0.08);
+    padding:15px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 8px 20px rgba(0,0,0,0.3);
+    transition:0.3s;
+}
+
+.fashion-item:hover{
+    transform:translateY(-8px);
+    box-shadow:0 12px 25px rgba(124,58,237,0.5);
+}
+
+.fashion-item img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+    border-radius:12px;
+}
+
+.fashion-item h3{
+    color:white;
+    margin:15px 0;
+    font-size:20px;
+}
+
+.fashion-item button{
+    width:100%;
+    padding:10px;
+    background:#7c3aed;
+    color:white;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.fashion-item button:hover{
+    background:#9333ea;
+}
+.wardrobe-page{
+    min-height:100vh;
+    background:linear-gradient(135deg,#0f172a,#312e81,#6d28d9);
+    padding:40px 0;
+}
+/* ========================= */
+/* SMART WARDROBE PAGE */
+/* ========================= */
+
+.wardrobe-container{
+    max-width:1200px;
+    margin:120px auto 50px;
+    padding:30px;
+    background:rgba(15,23,42,0.90);
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+
+.wardrobe-container h1{
+    text-align:center;
+    color:white;
+    font-size:45px;
+}
+
+.wardrobe-container p{
+    text-align:center;
+    color:#d1d5db;
+    margin-bottom:35px;
+}
+
+.wardrobe-container h2{
+    color:#a855f7;
+    margin:30px 0 20px;
+}
+
+.fashion-gallery{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+    margin-bottom:40px;
+}
+
+.fashion-item{
+    width:260px;
+    background:#1e293b;
+    border-radius:15px;
+    overflow:hidden;
+    text-align:center;
+    box-shadow:0 8px 20px rgba(0,0,0,0.3);
+    transition:0.3s;
+}
+
+.fashion-item:hover{
+    transform:translateY(-8px);
+}
+
+.fashion-item img{
+    width:100%;
+    height:320px;
+    object-fit:cover;
+}
+
+.fashion-item h3{
+    color:white;
+    margin:15px 0;
+}
+
+.fashion-item button{
+    width:85%;
+    margin-bottom:20px;
+    padding:12px;
+    background:#7c3aed;
+    color:white;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.fashion-item button:hover{
+    background:#9333ea;
+}
+
+.wardrobe-container label{
+    color:white;
+    display:block;
+    margin-top:15px;
+}
+
+.wardrobe-container select,
+.wardrobe-container input{
+    width:100%;
+    padding:12px;
+    border-radius:10px;
+    border:none;
+}
+   
+
+/* Recommendation Page */
+
+body{
+    margin:0;
+    padding:0;
+    background:linear-gradient(135deg,#0f172a,#1e293b,#334155);
+    font-family:Arial, sans-serif;
+}
+
+.login-box{
+    width:450px;
+    margin:50px auto;
+    background:rgba(255,255,255,0.12);
+    padding:35px;
+    border-radius:20px;
+    backdrop-filter:blur(12px);
+    box-shadow:0 8px 30px rgba(0,0,0,0.4);
+}
+
+.login-box h1{
+    color:white;
+    text-align:center;
+}
+
+.login-box label{
+    color:white;
+    font-size:18px;
+}
+
+.login-box select,
+.login-box input{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    font-size:16px;
+}
+
+.login-box button{
+    width:100%;
+    padding:14px;
+    background:#6366f1;
+    color:white;
+    border:none;
+    border-radius:10px;
+    font-size:18px;
+    cursor:pointer;
+}
+
+.login-box button:hover{
+    background:#4f46e5;
+}
+
+#result{
+    margin-top:25px;
+    background:#111827;
+    color:white;
+    padding:20px;
+    border-radius:12px;
+    text-align:center;
+    font-size:20px;
+    min-height:70px;
+}

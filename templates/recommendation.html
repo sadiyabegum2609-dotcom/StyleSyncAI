@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Recommendation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<div class="login-box">
+
+    <h1>👗 AI Outfit Recommendation</h1>
+
+    <form action="/recommendation" method="POST">
+
+        <label>Weather</label><br><br>
+        <select name="weather">
+            <option>Hot</option>
+            <option>Cold</option>
+            <option>Rainy</option>
+        </select>
+
+        <br><br>
+
+        <label>Gender</label><br><br>
+        <select name="gender">
+            <option>Male</option>
+            <option>Female</option>
+        </select>
+
+        <br><br>
+
+        <label>Occasion</label><br><br>
+        <select name="occasion">
+            <option>College</option>
+            <option>Party</option>
+            <option>Office</option>
+            <option>Wedding</option>
+        </select>
+
+        <br><br>
+
+        <label>Favourite Color</label><br><br>
+        <select name="color">
+            <option>Black</option>
+            <option>Blue</option>
+            <option>White</option>
+            <option>Pink</option>
+            <option>Red</option>
+            <option>Green</option>
+        </select>
+
+        <br><br>
+
+        <button type="submit">
+            Recommend Outfit
+        </button>
+
+    </form>
+
+    <br>
+
+    {% if outfit %}
+        <div id="result">
+            <h2>🤖 AI Recommendation</h2>
+            <p>{{ outfit }}</p>
+        </div>
+    {% endif %}
+
+</div>
+
+</body>
+</html>

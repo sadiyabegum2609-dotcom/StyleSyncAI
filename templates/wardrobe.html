@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Wardrobe - StyleSync AI</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body class="wardrobe-page">
+
+<header>
+
+    <div class="logo">StyleSync AI</div>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="/recommendation">Recommendation</a>
+        <a href="/wardrobe">Wardrobe</a>
+    </nav>
+
+</header>
+
+<div class="wardrobe-container">
+
+    <h1>👗 Smart Wardrobe</h1>
+
+    <p>Choose your favourite fashion style or add your own clothing item.</p>
+
+    <h2>✨ Fashion Collection ✨</h2>
+
+    <div class="fashion-gallery">
+
+        <div class="fashion-item">
+            <img src="{{ url_for('static', filename='css/images/fashion1.jpg') }}">
+            <h3>Casual Outfit</h3>
+        </div>
+
+        <div class="fashion-item">
+            <img src="{{ url_for('static', filename='css/images/fashion2.jpg') }}">
+            <h3>Party Wear</h3>
+        </div>
+
+        <div class="fashion-item">
+            <img src="{{ url_for('static', filename='css/images/fashion3.jpg') }}">
+            <h3>Traditional Wear</h3>
+        </div>
+
+    </div>
+
+    <h2>➕ Add New Clothing Item</h2>
+
+    <form method="POST">
+
+        <label>Category</label>
+
+        <select name="category" required>
+            <option>T-Shirt</option>
+            <option>Jeans</option>
+            <option>Dress</option>
+            <option>Jacket</option>
+            <option>Shoes</option>
+            <option>Bag</option>
+        </select>
+
+        <label>Item Name</label>
+
+        <input
+            type="text"
+            name="item_name"
+            placeholder="Example: Blue Denim Jeans"
+            required
+        >
+
+        <button type="submit">
+            Add Item
+        </button>
+
+    </form>
+
+    <h2>🧥 My Wardrobe</h2>
+
+    {% if items %}
+
+        {% for item in items %}
+
+        <div class="wardrobe-card">
+
+            <h3>{{ item[1] }}</h3>
+
+            <p>{{ item[2] }}</p>
+
+        </div>
+
+        {% endfor %}
+
+    {% else %}
+
+        <p>No clothing items added yet.</p>
+
+    {% endif %}
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Signup - StyleSync AI</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<div class="login-box">
+
+    <h1>Signup</h1>
+
+    <form method="POST" action="/signup">
+
+    <input type="text" name="username" placeholder="Enter Name" required>
+
+    <input type="email" name="email" placeholder="Enter Email" required>
+
+    <input type="password" name="password" placeholder="Create Password" required>
+
+    <button type="submit">Signup</button>
+
+</form>
+
+</div>
+
+</body>
+</html>

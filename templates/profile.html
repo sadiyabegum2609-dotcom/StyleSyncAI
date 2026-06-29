@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Profile - StyleSync AI</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">StyleSync AI</div>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="/wardrobe">Wardrobe</a>
+        <a href="/recommendation">Recommendation</a>
+    </nav>
+
+</header>
+
+<div class="login-box">
+
+    <h1>👤 My Profile</h1>
+
+    <h2>{{ username }}</h2>
+
+    <p><strong>Email:</strong> {{ email }}</p>
+
+    <br>
+
+    <button onclick="location.href='/logout'">
+        🚪 Logout
+    </button>
+
+</div>
+
+</body>
+</html>
