@@ -46,6 +46,14 @@ def signup():
         conn = sqlite3.connect("stylesync.db")
         cursor = conn.cursor()
 
+        # Check if email already exists
+        cursor.execute("SELECT * FROM users WHERE email = ?", (email,))
+        user = cursor.fetchone()
+
+        if user:
+            conn.close()
+            return "Email already registered. Please login or use another email."
+
         cursor.execute(
             "INSERT INTO users (username, email, password) VALUES (?, ?, ?)",
             (username, email, password)
